@@ -28,7 +28,45 @@
     color: var(--white);
 }
 
+.z-ind{
+    z-index: 99;
+}
+
+.bgc-blue{
+    background-color : var(--blue);
+}
 
 *{
     font-family: 'Comic Neue', cursive;
+}
+
+.nav-img{
+    margin-left: -12px;
+    margin-top: -12px;
+    margin-bottom: -10px;
+}
+
+.nav-title{
+    font-family: 'Acme', sans-serif;
+}
+
+.fs-10{
+    font-size: 10px;
+}
+
+.navb-link-cont{
+    border-bottom: 1px solid black;
+}
+
+.collapse .navb-link-cont .show{
+    border-bottom: 1px solid black;
+    text-align: center;
+
+}
+
+.navbar-toggler .btnCol {
+    border: none;
+    color: var(--black);
+    text-decoration: none;
+
 }
