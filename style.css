@@ -1,0 +1,12 @@
+
+:root{
+    --yellow : #ffe020;
+    --blue: #1D4CDF;
+    --red: #E20D0C;
+    --black: #020202;
+    --white: #fff;
+}
+
+*{
+    font-family: 'Comic Neue', cursive;
+}
