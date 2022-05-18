@@ -7,6 +7,28 @@
     --white: #fff;
 }
 
+
+.c-yellow{
+    color: var(--yellow);
+}
+
+.c-blue{
+    color: var(--blue);
+}
+
+.c-red{
+    color: var(--red);
+}
+
+.c-black{
+    color: var(--black);
+}
+
+.c-white{
+    color: var(--white);
+}
+
+
 *{
     font-family: 'Comic Neue', cursive;
 }
