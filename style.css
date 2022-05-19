@@ -102,12 +102,6 @@
     height: 70vh;
 }
 
-/* .bg-title-head{
-    background-color: white;
-    background-image: url(./media/manga-effect-comic.jpg);
-    background-size: contain;
-
-} */
 
 .bg-h-head{
     background-color: rgba(255, 255, 255, 0.25);
@@ -116,4 +110,51 @@
 .img-title{
     max-width: 250px;
     max-height: 150px;
+}
+
+/* SEZIONE CATEGORIE */
+
+.card-category-manga{
+    height: 250px;
+    width: 400px;
+    background-image: url(./media/manga-open.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+.card-category-comic{
+    height: 250px;
+    width: 400px;
+    background-image: url(./media/comics.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+.card-category-gadget{
+    height: 250px;
+    width: 400px;
+    background-image: url(./media/yamcha-gad.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+.card-category-forum{
+    height: 250px;
+    width: 400px;
+    background-image: url(./media/manga-sign.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 50px;
 }
