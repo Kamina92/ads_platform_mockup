@@ -37,7 +37,9 @@
 }
 
 *{
-    font-family: 'Comic Neue', cursive;
+    /* font-family: 'Comic Neue', cursive; */
+    font-family: 'Acme', sans-serif;
+
 }
 
 .nav-img{
@@ -56,6 +58,7 @@
 
 .navb-link-cont{
     border-bottom: 1px solid black;
+    width: 100%;
 }
 
 .collapse .navb-link-cont .show{
@@ -69,4 +72,48 @@
     color: var(--black);
     text-decoration: none;
 
+}
+
+.srcBar{
+    position: absolute;
+    top: -100px;
+    z-index: 999;
+    background-color: var(--white);
+    height: 100px;
+    transition: all 0.5s;
+}
+.srcBarActive{
+    position: absolute;
+    top: 40px;
+    z-index: 999;
+    background-color: var(--white);
+    height: 100px;
+    transition: all 0.5s;
+
+}
+
+/* HEADER */
+
+.masthead{
+    background-image: url(./media/manga-store.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
+
+/* .bg-title-head{
+    background-color: white;
+    background-image: url(./media/manga-effect-comic.jpg);
+    background-size: contain;
+
+} */
+
+.bg-h-head{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.img-title{
+    max-width: 250px;
+    max-height: 150px;
 }
