@@ -124,6 +124,7 @@
     overflow: hidden;
     border: 1px solid black;
     border-radius: 50px;
+    box-shadow: 2px 2px 5px black;
 }
 .card-category-comic{
     height: 250px;
@@ -135,6 +136,8 @@
     overflow: hidden;
     border: 1px solid black;
     border-radius: 50px;
+    box-shadow: 2px 2px 5px black;
+
 }
 .card-category-gadget{
     height: 250px;
@@ -146,6 +149,8 @@
     overflow: hidden;
     border: 1px solid black;
     border-radius: 50px;
+    box-shadow: 2px 2px 5px black;
+
 }
 .card-category-forum{
     height: 250px;
@@ -157,4 +162,6 @@
     overflow: hidden;
     border: 1px solid black;
     border-radius: 50px;
+    box-shadow: 2px 2px 5px black;
+
 }
