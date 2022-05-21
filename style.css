@@ -285,3 +285,23 @@ body{
     border: 3px solid white;
 
 }
+
+/* CARD PRODOTTI */
+
+.cardProd{
+    height: 400px;
+    width: 300px;
+    background-color: var(--white);
+    color: var(--main);
+    border: 1px transparent;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px var(--main);
+    overflow: hidden;
+    padding: 0px;
+    margin: auto;
+}
+
+.swiper-pagination-bullet-active{
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: var(--main)
+}
