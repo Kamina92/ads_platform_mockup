@@ -306,6 +306,47 @@ body{
     background: var(--main)
 }
 
+.tagVendo{
+
+    padding: 5px 15px;
+    background-color: var(--main);
+    color: var(--white);
+    margin-left: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 99;
+    top: 60px
+
+}
+.tagCerco{
+
+    padding: 5px 15px;
+    background-color: var(--green-2);
+    color: var(--white);
+    margin-left: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 99;
+    top: 60px
+
+}
+.tagPremium{
+
+    padding: 5px 15px;
+    background-color: var(--yellow);
+    color: var(--black-v);
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 99;
+    top: 401px
+
+}
+
 /* ASIDE ACCOUNT PREMIUM */
 
 .contPrem{
@@ -330,11 +371,18 @@ body{
     z-index:999;
 }
 
-#middleIco::before{
+/* #middleIco{
+    position: relative;
+    
+}
+
+#middleIco::after{
     font-family: "Font Awesome 5 Free";
     font-weight: 600;
     font-size: 70px;
     content: '\f0da';
-    position: relative;
-    left: -50%;
-}
+    position: absolute;
+    left: 320px;
+} */
+
+/* FOOTER */
