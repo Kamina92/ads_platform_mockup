@@ -24,12 +24,12 @@
 </head>
 <body>
     <div class="wrapper">
-        
-        <div class="container mt-3">
+        <!-- NAVBAR -->
+        <nav class="container mt-3 d-none d-lg-block fixed-top" id="navDesk">
             <div class="row navCont h-100 py-2">
                 <div class="col-4 d-flex justify-content-start align-items-center">
                     <i class="fa-solid fa-person-running fa-3x c-main me-1"></i>
-                    <a href="" class="text-decoration-none fs-1 fw-bold c-main">
+                    <a href="" class="text-decoration-none fs-1 fw-bold c-main navLogo">
                         Presto . IT
                     </a>
                 </div>
@@ -39,7 +39,7 @@
                             Accedi
                         </a>
                     </div>
-                    <div class="ms-4">
+                    <div class="ms-4 me-0">
                         <a href="" class="navLink fs-6 c-black-v">
                             Registrati
                         </a>
@@ -52,7 +52,36 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </nav>
+        <nav class="container mt-3 d-block d-lg-none fixed-top" id="navMobile">
+            <div class="row h-100 justify-content-around align-items-center navCont py-3">
+                <div class="col-3 d-flex flex-column justify-content-center align-items-center c-main">
+                    <i class="fa-solid fa-person-running fa-2x c-main">
+                    </i>
+                    <small>Home</small>
+                </div>
+                <div class="col-3 d-flex flex-column justify-content-center align-items-center c-main">
+                    <i class="fa-solid fa-arrow-right-to-bracket fa-2x"></i>
+                    <small>Accedi</small>
+                </div>
+                <div class="col-3 d-flex flex-column justify-content-center align-items-center c-main">
+                    <i class="fa-solid fa-user-plus fa-2x"></i>
+                    <small>Registrati</small>
+                </div>
+                <div class="col-3 d-flex flex-column justify-content-center align-items-center c-main">
+                    <i class="fa-solid fa-plus fa-2x"></i>
+                    <small>Annuncio</small>
+                </div>
+            </div>
+        </nav>
+        <!-- HEADER -->
+        <header class="container-fluid mastHead">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-12 fw-bold fs-3 fs-lg-1  text-center" id="counterTitle">
+
+                </div>
+            </div>
+        </header>
         
         
     </div>    
