@@ -69,18 +69,6 @@
 
 }
 
-<<<<<<< HEAD
-.navMobile{
-    height: 70px;
-    width: 100%;
-    transition: all 0.5s;
-}
-
-.navMobileCont{
-    position: relative;
-    top: -80px;
-}
-=======
 body{
     background-color: whitesmoke;
     background-position: center;
@@ -187,4 +175,3 @@ body{
    
 }
 
->>>>>>> test
