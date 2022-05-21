@@ -24,7 +24,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <!-- NAVBAR -->
+        <!-- NAVBARs -->
         <nav class="container mt-3 d-none d-lg-block fixed-top" id="navDesk">
             <div class="row navCont h-100 py-2">
                 <div class="col-4 d-flex justify-content-start align-items-center">
@@ -77,11 +77,59 @@
         <!-- HEADER -->
         <header class="container-fluid mastHead">
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-12 fw-bold fs-3 fs-lg-1  text-center" id="counterTitle">
-
+                <div class="col-12 fw-bold fs-3 fs-lg-1 d-flex flex-column flex-wrap justify-content-center align-items-center  text-center">
+                    <div class="fw-bold fs-3 fs-lg-1" id="counterTitle"></div>
+                    <h2 class="fw-bold fs-3 fs-lg-1">ANNUNCI</h2>
                 </div>
             </div>
         </header>
+        <!-- SEARCHBAR -->
+        <div class="container srcCont">
+            <div class="row  pt-4 scrRow justify-content-evenly align-items-center">
+                <div class="col-12 h-120 col-md-4">
+                    <p class="p-0 m-0 mb-1">Cosa cerchi ?</p>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white c-gray" id="basic-addon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input  type="text" class="form-control srcBoxes" placeholder="Vespa,Iphone,Bilocale" aria-label="parola da cercare" aria-describedby="basic-addon1">
+                      </div>
+                </div>
+                <div class="col-12 h-120 col-md-3">
+                    <p class="p-0 m-0 mb-1">In quale categoria ?</p>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white c-gray" id="basic-addon1">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </span>
+                        <select class="form-select srcBoxes" aria-label="categorie">
+                            <option value="all" selected>Tutte le categorie</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="col-12 h-120 col-md-3 ">
+                    <p class="p-0 m-0 mb-1">Dove ?</p>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white c-gray" id="basic-addon2">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <select class="form-select srcBoxes" aria-label="luogo">
+                            <option value="all" selected>Tutta Italia</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="col-12 h-120 col-md-1 d-flex flex-column justify-content-center mb-3">
+                    <button class="btn srcBtn">
+                        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
         
         
     </div>    

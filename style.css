@@ -9,12 +9,15 @@
     --green-2:#008f11;
     --green-1:#003b00;
     --green-3:#00ff41;
-    --main:#f9423a;
+    --main:rgb(249, 66, 58);
 
 }
 
 .c-main{
     color: var(--main);
+}
+.c-gray{
+    color: rgba(128, 128, 128, 0.501);
 }
 
 .c-black-v{
@@ -71,6 +74,12 @@ body{
     background-position: center;
 }
 
+.b-left-none{
+    border-left: none;
+}
+
+/* NAVBAR */
+
 .navCont{
     border-top:1px solid #dfe3ed;
     border-bottom:1px solid #dfe3ed;
@@ -102,6 +111,8 @@ body{
 
 }
 
+/* HEADER */
+
 .mastHead{
     background-image: url(./media/World\ Map.svg);
     height: 60vh;
@@ -110,7 +121,57 @@ body{
     background-repeat: no-repeat;
     margin-top: 120px;
 
-    margin-bottom: 1000px;
+}
 
+/* SEARCHBAR */
+
+.srcCont{
+
+    background-color: var(--white);
+    box-shadow: 2px 2px 4px grey;
+    min-height: 120px;
+    max-width: 80%;
+    margin-bottom: 1000px;
+}
+
+.h-120{
+    min-height: 120px;
+}
+
+.scrRow{
+    min-height: 120px;
+}
+
+.srcBoxes{
+    padding: 0px;
+    min-height: 50px;
+    width: 80%;
+    padding: 0px;
+    border-left: none;
+    border-top:1px solid rgba(128, 128, 128, 0.35);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+    border-right: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 5px;
+
+}
+
+.srcBoxes:focus{
+    border-left: none;
+    border-top:1px solid rgba(128, 128, 128, 0.35);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+    border-right: 1px solid rgba(128, 128, 128, 0.35);
+    box-shadow: none;
+}
+
+.srcBtn{
+    height: 50px;
+    background-color: var(--main);
+    color: var(--white);
+    font-weight: 300;
+}
+.srcBtn:hover{
+    background-color: rgba(249, 66, 58, 0.5);
+    color: var(--white);
+   
 }
 

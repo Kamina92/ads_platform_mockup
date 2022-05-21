@@ -9,7 +9,7 @@ function titleInterval(num,tag,finaltime) {
     let interval= setInterval(()=>{
         if(counter<finaltime){
             counter++
-            tag.innerHTML=`${counter} ANNUNCI`;
+            tag.innerHTML=`${counter}`;
         }else{
             clearInterval(interval);
         }
@@ -18,6 +18,8 @@ function titleInterval(num,tag,finaltime) {
 }
 
 titleInterval(0,counterTitle,100)
+
+// NAVBAR
 
 let navDesk=document.querySelector('#navDesk')
 let navMobile=document.querySelector('#navMobile')
@@ -31,3 +33,4 @@ document.addEventListener('scroll',()=>{
         navMobile.classList.remove('d-none')
     }
 })
+
