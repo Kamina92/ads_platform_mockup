@@ -13,7 +13,7 @@ function titleInterval(num,tag,finaltime) {
         }else{
             clearInterval(interval);
         }
-    },100);
+    },150);
     
 }
 

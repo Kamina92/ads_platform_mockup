@@ -9,7 +9,7 @@
     --green-2:#008f11;
     --green-1:#003b00;
     --green-3:#00ff41;
-    --main:rgb(249, 66, 58);
+    --main:#f9423a;
 
 }
 
@@ -131,7 +131,6 @@ body{
     box-shadow: 2px 2px 4px grey;
     min-height: 120px;
     max-width: 80%;
-    margin-bottom: 1000px;
 }
 
 .h-120{
@@ -175,3 +174,114 @@ body{
    
 }
 
+.fw-medBold{
+    font-weight: 500;
+}
+
+/* CATEGORIE */
+
+.cardCat{
+    background: linear-gradient(90deg,#002eff 50%, #f9423a 50%);
+    background-size: 200%;
+    background-position: right;
+    overflow: hidden;
+    border: 1px transparent;
+    border-radius: 10px;
+    height: 180px;
+    max-width: 250px;
+    color: var(--white);
+    margin: 80px 10px 10px 10px;
+    transition: all 0.5s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cardCat:hover{
+
+    background-position: left;
+    transform: scale(1.1);
+    
+}
+.cardCat1{
+    background: linear-gradient(90deg,#9923fe 50%, #f9423a 50%);
+    background-size: 200%;
+    background-position: right;
+    overflow: hidden;
+    border: 1px transparent;
+    border-radius: 10px;
+    height: 180px;
+    max-width: 250px;
+    color: var(--white);
+    margin: 80px 10px 10px 10px;
+    transition: all 0.5s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cardCat1:hover{
+
+    background-position: left;
+    transform: scale(1.1);
+    
+}
+.cardCat2{
+    background: linear-gradient(90deg,#0abb9c 50%, #f9423a 50%);
+    background-size: 200%;
+    background-position: right;
+    overflow: hidden;
+    border: 1px transparent;
+    border-radius: 10px;
+    height: 180px;
+    max-width: 250px;
+    color: var(--white);
+    margin: 80px 10px 10px 10px;
+    transition: all 0.5s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cardCat2:hover{
+
+    background-position: left;
+    transform: scale(1.1);
+    
+}
+.cardCat3{
+    background: linear-gradient(90deg,#f2a702 50%, #f9423a 50%);
+    background-size: 200%;
+    background-position: right;
+    overflow: hidden;
+    border: 1px transparent;
+    border-radius: 10px;
+    height: 180px;
+    max-width: 250px;
+    color: var(--white);
+    margin: 80px 10px 10px 10px;
+    transition: all 0.5s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cardCat3:hover{
+
+    background-position: left;
+    transform: scale(1.1);
+    
+}
+
+.btnCat{
+    color: var(--white);
+    padding: 10px 50px;
+    border: 1px solid var(--white);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.btnCat:hover{
+    color: var(--white);
+    border: 3px solid white;
+
+}
