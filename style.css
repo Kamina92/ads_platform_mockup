@@ -5,8 +5,33 @@
     --red: #E20D0C;
     --black: #020202;
     --white: #fff;
+    --black-v: #0d0208;
+    --green-2:#008f11;
+    --green-1:#003b00;
+    --green-3:#00ff41;
+    --main:#f9423a;
+
 }
 
+.c-main{
+    color: var(--main);
+}
+
+.c-black-v{
+    color: var(--black-v);
+}
+
+.c-green-1{
+    color: var(--green-1);
+}
+
+.c-green-2{
+    color: var(--green-2);
+}
+
+.c-green-3{
+    color: var(--green-3);
+}
 
 .c-yellow{
     color: var(--yellow);
@@ -37,131 +62,37 @@
 }
 
 *{
-    /* font-family: 'Comic Neue', cursive; */
-    font-family: 'Acme', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
-.nav-img{
-    margin-left: -12px;
-    margin-top: -12px;
-    margin-bottom: -10px;
+body{
+    background-color: whitesmoke;
+    background-position: center;
 }
 
-.nav-title{
-    font-family: 'Acme', sans-serif;
+.navCont{
+    border-top:1px solid #dfe3ed;
+    border-bottom:1px solid #dfe3ed;
 }
 
-.fs-10{
-    font-size: 10px;
-}
-
-.navb-link-cont{
-    border-bottom: 1px solid black;
-    width: 100%;
-}
-
-.collapse .navb-link-cont .show{
-    border-bottom: 1px solid black;
-    text-align: center;
-
-}
-
-.navbar-toggler .btnCol {
-    border: none;
-    color: var(--black);
+.navLink{
     text-decoration: none;
-
+    transition: all 0.3s;
+}
+.navLink:hover{
+    text-decoration: underline;
+    color: var(--black-v);
 }
 
-.srcBar{
-    position: absolute;
-    top: -100px;
-    z-index: 999;
-    background-color: var(--white);
-    height: 100px;
+.btNav{
+    padding: 10;
+    background-color: rgba(249, 66, 58, 0.1);
     transition: all 0.5s;
 }
-.srcBarActive{
-    position: absolute;
-    top: 40px;
-    z-index: 999;
-    background-color: var(--white);
-    height: 100px;
-    transition: all 0.5s;
 
+.btNav:hover{
+    border: 1px solid var(--red);
+    color: var(--main);
 }
 
-/* HEADER */
-
-.masthead{
-    background-image: url(./media/manga-store.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 70vh;
-}
-
-
-.bg-h-head{
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-.img-title{
-    max-width: 250px;
-    max-height: 150px;
-}
-
-/* SEZIONE CATEGORIE */
-
-.card-category-manga{
-    height: 250px;
-    width: 400px;
-    background-image: url(./media/manga-open.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    border: 1px solid black;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px black;
-}
-.card-category-comic{
-    height: 250px;
-    width: 400px;
-    background-image: url(./media/comics.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    border: 1px solid black;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px black;
-
-}
-.card-category-gadget{
-    height: 250px;
-    width: 400px;
-    background-image: url(./media/yamcha-gad.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    border: 1px solid black;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px black;
-
-}
-.card-category-forum{
-    height: 250px;
-    width: 400px;
-    background-image: url(./media/manga-sign.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    border: 1px solid black;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px black;
-
-}
