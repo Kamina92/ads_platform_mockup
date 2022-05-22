@@ -40,12 +40,16 @@ fetch('./MOCK_DATA.json')
   let placeSrc=document.querySelector('#placeSrc')
   let secProd =document.querySelector('#secProd');
   let inputSrc= document.querySelector('#inputSrc');
-  
+  let srcBtn= document.querySelector('.srcBtn');
+  // let productElement=document.querySelector('.product-element');
+
+
   // FUNZIONI LANCIATE
   
   popolaDropCat();
   popolaDropPlace();
   populateProd();
+  
 
   
   
@@ -83,7 +87,7 @@ fetch('./MOCK_DATA.json')
   function populateProd() {
     products.forEach(el=>{
       let div = document.createElement('div');
-        div.classList.add('col-12','col-lg-4');
+        div.classList.add('col-12','col-lg-4','product-element');
         div.setAttribute('product-id',el.id);
         div.innerHTML=`
         <div class="cardProduct my-5">
@@ -111,8 +115,34 @@ fetch('./MOCK_DATA.json')
     })
     
   }
- 
+  
 
+  function filter() {
+    let selectedCategory=catSrc.value;
+
+    let filteredProductByCat = products.filter(product=> {
+      return product.category === selectedCategory || selectedCategory=='all';
+    }).map(product =>{
+      return product.id;
+    })
+    showHideFilter(filteredProductByCat)
+  
+  }
+
+  function showHideFilter(filteredProductByCat) {
+    let productElement=document.querySelectorAll('.product-element');
+
+    productElement.forEach(el=>{
+      let productId= Number(el.getAttribute('product-id'));
+      if(filteredProductByCat.includes(productId) ){
+        el.classList.remove('d-none')
+      }else {
+        el.classList.add('d-none')
+      }
+    })
+    
+  }
+  srcBtn.addEventListener('click',filter)
     
   })
 

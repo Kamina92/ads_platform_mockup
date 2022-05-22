@@ -149,6 +149,7 @@ body{
 
 .mastHead{
     height: 50vh;
+    background-image: url(./media/World\ Map.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
