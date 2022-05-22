@@ -60,8 +60,8 @@
     z-index: 99;
 }
 
-.bgc-blue{
-    background-color : var(--blue);
+.bgc-main{
+    background-color : var(--main);
 }
 
 *{
@@ -79,6 +79,31 @@ body{
 }
 
 /* NAVBAR */
+
+#logIn{
+    z-index: 9999;
+    background-color: whitesmoke;
+    position: relative;
+    height: 65px;
+
+}
+
+.contLogIn{
+    top: -100px;
+}
+.contLogIn-active{
+    top: 65px;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border: 2px solid var(--main);
+}
+
+.btn-logIn{
+    padding:6px 30px;
+    margin-bottom: 1px;
+}
 
 .navCont{
     border-top:1px solid #dfe3ed;
@@ -119,7 +144,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 120px;
+    margin-top: 100px;
 
 }
 
