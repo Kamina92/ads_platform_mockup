@@ -98,7 +98,7 @@ fetch('./MOCK_DATA.json')
   })))
   categories.forEach((el,i) =>{
     let option=document.createElement('option')
-    option.setAttribute('value',`${i+1}`)
+    option.setAttribute('value',`${el}`)
     option.innerHTML=`${el}`
     catSrc.appendChild(option)
   })
@@ -107,10 +107,9 @@ fetch('./MOCK_DATA.json')
   let places = Array.from(new Set(products.map(el=>{
     return el.position
   })))
-  console.log(places);
   places.forEach((el,i) =>{
     let option=document.createElement('option')
-    option.setAttribute('value',`${i+1}`)
+    option.setAttribute('value',`${el}`)
     option.innerHTML=`${el}`
     placeSrc.appendChild(option)
   })
@@ -144,7 +143,7 @@ fetch('./MOCK_DATA.json')
       <small class="mt-2 ms-2 d-block">
       ${sorted[i].date}
       </small>
-      <small class="tagVendo">VENDO</small>
+      <small class=${sorted[i].stat=="vendo"? 'tagVendo' : 'tagCerco'}>${sorted[i].stat=="vendo"? 'VENDO' : 'CERCO'}</small>
       <small class=${sorted[i].premium=="PREMIUM"?'tagPremium':''}>${sorted[i].premium=="PREMIUM"? 'PREMIUM' : ''}</small>
       <small class="mt-2 ms-auto me-2 pb-3 text-end d-block fw-bold fs-4 c-green-2">
       ${sorted[i].price}
