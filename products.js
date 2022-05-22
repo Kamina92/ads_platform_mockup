@@ -105,7 +105,7 @@ fetch('./MOCK_DATA.json')
             ${el.date}
             </small>
             <small class=${el.stat=="vendo"? 'tagSell' : 'tagSearch'}>${el.stat=="vendo"? 'VENDO' : 'CERCO'}</small>
-            <small class=${el.premium=="PREMIUM"?'tagPrem':''}>${el.premium=="PREMIUM"? 'PREMIUM' : ''}</small>
+            <small class=${el.premium=="1"?'tagPrem':''}>${el.premium=="1"? 'PREMIUM' : ''}</small>
             <small class="mt-2 ms-auto me-2 pb-3 text-end d-block fw-bold fs-4 c-green-2">
             ${el.price}
             </small>
@@ -119,9 +119,13 @@ fetch('./MOCK_DATA.json')
 
   function filter() {
     let selectedCategory=catSrc.value;
+    let selectedPlace= placeSrc.value;
+    let searchedProduct= inputSrc.value.toLowerCase();
 
-    let filteredProductByCat = products.filter(product=> {
+    let filteredProductByCat = products.filter(product=> {return product.product.toLowerCase() === searchedProduct || selectedCategory=='';}).filter(product=> {
       return product.category === selectedCategory || selectedCategory=='all';
+    }).filter(product=> {
+      return product.position === selectedPlace || selectedPlace=='all';
     }).map(product =>{
       return product.id;
     })
