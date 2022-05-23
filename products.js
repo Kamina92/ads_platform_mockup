@@ -122,19 +122,21 @@ fetch('./MOCK_DATA.json')
     let selectedPlace= placeSrc.value;
     let searchedProduct= inputSrc.value.toLowerCase();
 
-    let filteredProductByCat = products.filter(product=> {return product.product.toLowerCase() === searchedProduct || selectedCategory=='';}).filter(product=> {
+    let filteredProduct = products.filter(product=> { return product.product.toLowerCase().includes(searchedProduct)}).filter(product=> {
       return product.category === selectedCategory || selectedCategory=='all';
     }).filter(product=> {
       return product.position === selectedPlace || selectedPlace=='all';
     }).map(product =>{
       return product.id;
     })
-    showHideFilter(filteredProductByCat)
+    showHideFilter(filteredProduct)
   
+   
   }
 
+
   function showHideFilter(filteredProductByCat) {
-    let productElement=document.querySelectorAll('.product-element');
+  let productElement=document.querySelectorAll('.product-element');
 
     productElement.forEach(el=>{
       let productId= Number(el.getAttribute('product-id'));
