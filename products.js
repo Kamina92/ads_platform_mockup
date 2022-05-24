@@ -41,6 +41,7 @@ fetch('./MOCK_DATA.json')
   let secProd =document.querySelector('#secProd');
   let inputSrc= document.querySelector('#inputSrc');
   let srcBtn= document.querySelector('.srcBtn');
+  let select = document.querySelector('#select');
   // let productElement=document.querySelector('.product-element');
 
 
@@ -48,8 +49,11 @@ fetch('./MOCK_DATA.json')
   
   popolaDropCat();
   popolaDropPlace();
-  populateProd();
   
+  srcBtn.addEventListener('click',filter);
+  select.addEventListener('input',sortProducts);
+  console.log(products);
+  populateProd();
 
   
   
@@ -120,27 +124,29 @@ fetch('./MOCK_DATA.json')
   function filter() {
     let selectedCategory=catSrc.value;
     let selectedPlace= placeSrc.value;
-    let searchedProduct= inputSrc.value.toLowerCase();
-
+    let searchedProduct= inputSrc.value.toLowerCase();    
     let filteredProduct = products.filter(product=> { return product.product.toLowerCase().includes(searchedProduct)}).filter(product=> {
       return product.category === selectedCategory || selectedCategory=='all';
     }).filter(product=> {
       return product.position === selectedPlace || selectedPlace=='all';
-    }).map(product =>{
+    })
+    
+    
+    let filteredIDs=filteredProduct.map(product =>{
       return product.id;
     })
-    showHideFilter(filteredProduct)
-  
-   
+    
+    
+    showHideFilter(filteredIDs)
   }
 
 
-  function showHideFilter(filteredProductByCat) {
+  function showHideFilter(filteredIDs) {
   let productElement=document.querySelectorAll('.product-element');
 
     productElement.forEach(el=>{
       let productId= Number(el.getAttribute('product-id'));
-      if(filteredProductByCat.includes(productId) ){
+      if(filteredIDs.includes(productId) ){
         el.classList.remove('d-none')
       }else {
         el.classList.add('d-none')
@@ -148,13 +154,49 @@ fetch('./MOCK_DATA.json')
     })
     
   }
-  srcBtn.addEventListener('click',filter)
-    
-  })
-
-
-    
   
+  function sortProducts() {
+    let order = select.value;
+    console.log(products);
+    switch (order) {
+      case "cheaper":
+        products.sort((a,b)=> 
+        Number(a.price.substring(1))-Number(b.price.substring(1)));
+        
+        break;
+        case "expensive":
+          products.sort((a,b)=> 
+          Number(b.price.substring(1))-Number(a.price.substring(1)));
+          
+          break;
+        default:
+        break;
+        }  
+      }
+      orderDom();
+      
+      
+      function orderDom() {
+        
+        let productElement=document.querySelectorAll('.product-element');
+
+        
+        productElement.forEach(el=> {
+          let productId= Number(el.getAttribute('product-id'));
+          
+          let orderIndex = products.findIndex(product=> product.id == productId);
+          console.log(orderIndex);
+          
+          el.style.order = orderIndex;
+          
+        })
+        
+        
+      }
+      
+    })
+      
+    
 
 
 
