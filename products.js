@@ -24,9 +24,7 @@ document.addEventListener('scroll',()=>{
 
 
 
-// SEARCHBAR E SETINTERVAL HEADER
-
-
+// FETCH FILE JSON E RELATIVE FUNZIONI DI POPOLAZIONE E FILTRI
 
 
 fetch('./MOCK_DATA.json')
@@ -53,7 +51,7 @@ fetch('./MOCK_DATA.json')
   srcBtn.addEventListener('click',filter);
   select.addEventListener('input',sortProducts);
   console.log(products);
-  populateProd();
+  populateProd(products);
 
   
   
@@ -88,7 +86,7 @@ fetch('./MOCK_DATA.json')
 
   // CREAZIONE CARD PORDOTTI
 
-  function populateProd() {
+  function populateProd(products) {
     products.forEach(el=>{
       let div = document.createElement('div');
         div.classList.add('col-12','col-lg-4','product-element');
@@ -124,12 +122,16 @@ fetch('./MOCK_DATA.json')
   function filter() {
     let selectedCategory=catSrc.value;
     let selectedPlace= placeSrc.value;
-    let searchedProduct= inputSrc.value.toLowerCase();    
+    let searchedProduct= inputSrc.value.toLowerCase();  
+    
+    // CREO ARRAY FILTRATO PER INPUT CATEGORIA E LUOGO
+    
     let filteredProduct = products.filter(product=> { return product.product.toLowerCase().includes(searchedProduct)}).filter(product=> {
       return product.category === selectedCategory || selectedCategory=='all';
     }).filter(product=> {
       return product.position === selectedPlace || selectedPlace=='all';
     })
+    
     
     
     let filteredIDs=filteredProduct.map(product =>{
@@ -172,8 +174,11 @@ fetch('./MOCK_DATA.json')
         default:
         break;
         }  
+        secProd.innerHTML ='';
+        populateProd(products);
+        filter();
+        console.log(products);
       }
-      orderDom();
       
       
       function orderDom() {
